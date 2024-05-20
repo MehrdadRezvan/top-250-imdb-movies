@@ -8,7 +8,9 @@ export default function NotFound() {
   },[])
   return(
       <PrimaryLayout>
-        <div>DESTINATION ADDRESS NOT FOUND!!! </div>
+        <div className='wrapper'>
+          <div>DESTINATION ADDRESS NOT FOUND!!! </div>
+        </div>
       </PrimaryLayout>
   )
 }

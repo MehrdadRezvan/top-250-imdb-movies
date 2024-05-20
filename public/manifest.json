@@ -3,12 +3,12 @@
   "name": "Top 250 IMDB Movies",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./assets/images/favicon.ico",
       "type": "image/x-icon",
       "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "logo225.png",
+      "src": "./assets/images/logo225.png",
       "type": "image/png",
       "sizes": "225x225"
     }

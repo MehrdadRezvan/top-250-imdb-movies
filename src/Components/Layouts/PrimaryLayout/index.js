@@ -6,7 +6,9 @@ export default function PrimaryLayout({children}) {
   return(
     <Fragment>
       <Header />
-      <div className="wrapper">{children}</div>
+      <div className="pb-50">
+        {children}
+      </div>
       <Footer />
     </Fragment>
   )

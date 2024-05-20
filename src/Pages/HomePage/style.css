@@ -1,0 +1,16 @@
+.movie-list .list-title {
+  gap: 1.5rem;
+}
+.movie-list .list-title a {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.4rem;
+  border: 0.1rem solid #bdc3c7;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.8rem 0.5rem 0.8rem;
+}
+.movie-list .list-title:hover a {
+  visibility: visible;
+  opacity: 1;
+  border-color: #fff;
+}
