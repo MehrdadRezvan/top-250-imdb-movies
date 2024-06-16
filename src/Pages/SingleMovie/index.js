@@ -25,7 +25,7 @@ export default function SingleMovie() {
       setTitle("REFRESH THE PAGE")
       setLoading(false)
     })
-  },[])
+  },[id])
   return(
     <PrimaryLayout>
       <div className="inner-hero relative">

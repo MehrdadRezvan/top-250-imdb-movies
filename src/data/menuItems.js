@@ -4,12 +4,12 @@ export const headerMenuItems = [
     link: "/"
   },
   {
-    title: "Movies",
+    title: "All Movies",
     link: "/movies"
   },
   {
-    title: "Animations",
-    link: "/animations"
+    title: "Search",
+    link: "/search"
   }
 ]
 export const footerMenuItems = [
@@ -18,11 +18,11 @@ export const footerMenuItems = [
     link: "/"
   },
   {
-    title: "Movies",
+    title: "All Movies",
     link: "/movies"
   },
   {
-    title: "Animations",
-    link: "/animations"
+    title: "Search",
+    link: "/search"
   }
 ]

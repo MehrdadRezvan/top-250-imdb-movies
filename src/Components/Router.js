@@ -3,6 +3,7 @@ import HomePage from './../Pages/HomePage';
 import NotFound from './../Pages/NotFound';
 import SingleMovie from '../Pages/SingleMovie';
 import GenreList from '../Pages/GenreList';
+import Search from '../Pages/Search';
 
 const routes = createBrowserRouter([
   {
@@ -14,12 +15,20 @@ const routes = createBrowserRouter([
     element: <SingleMovie />  
   },
   {
+    path: "/m",
+    element: <NotFound />  
+  },
+  {
     path: "/g/:id",
     element: <GenreList />
   },
   {
-    path: "/g/",
+    path: "/g",
     element: <GenreList />
+  },
+  {
+    path: "/search",
+    element: <Search />  
   },
   {
     path: "*",

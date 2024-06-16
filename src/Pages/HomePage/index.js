@@ -3,8 +3,8 @@ import PrimaryLayout from '../../Components/Layouts/PrimaryLayout'
 import MovieList from './../../Components/MovieList'
 import setTitle from './../../helpers/setTitle'
 import axios from 'axios'
-import './style.css'
 import shuffle from '../../helpers/arrayShuffle'
+import './style.css'
 
 export default function HomePage() {
   const [genreList, setGenreList] = useState([])

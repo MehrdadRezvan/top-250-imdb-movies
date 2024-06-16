@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import Menu from "../Menu"
 import {headerMenuItems} from "../../data/menuItems"
 import './style.css'
+import Search from "../Search"
 
 export default function Header() {
   return(
@@ -14,10 +15,7 @@ export default function Header() {
             <h1>Top 250 IMDB Movies</h1>
           </div>
         </Link>
-        <div className="search row align-center">
-          <img className="mr-2" src="/assets/images/search.svg" alt="" />
-          <input placeholder="Type-in to search ..."></input>
-        </div>
+        <Search />
       </div>
     </div>
   )
