@@ -25,7 +25,7 @@ export default function HomePage() {
   }
   return (
       <PrimaryLayout>
-        <div className='wrapper'>
+        <div className='wrapper pb-3'>
           {renderHomePageLists()}
         </div>
       </PrimaryLayout>
