@@ -25,6 +25,10 @@
   overflow-y: scroll;
   background-color: rgba(106, 127, 140, 0.2);;
 }
+.search ul.invisible {
+  visibility: none;
+  opacity: 0;
+}
 .search ul:hover {
   background-color: rgba(106, 127, 140, 0.3);;
 }

@@ -1,0 +1,20 @@
+.filter-buttons button {
+  width: 100%;
+}
+.movie-list img {
+  width: 100%;
+  object-fit: cover;
+  height: 28rem;
+  border-radius: 0.8rem;
+}
+.movie-list .movie-details {
+  height: 28rem;
+  /* width: 100%; */
+}
+.movie-list .movie-space {
+  width: 100%;
+}
+.pagination {
+  border: 2px solid rgba(106, 127, 140, 0.3) ;
+  border-radius: 8px;
+}

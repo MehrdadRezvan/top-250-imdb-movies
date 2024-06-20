@@ -18,16 +18,27 @@ a:hover {
 .pb-50 {
   padding-bottom: 5rem;
 }
-.movie-row-6 ul li {
-  min-height: 34rem;
-  /* flex-basis: 16.66%; */
+.movie-row-6 .movie-item {
+  min-height: 38rem;
 }
-.movie-row-6 ul li img {
+.movie-row-6 .movie-item img {
   width: 100%;
   height: 268px;
   object-fit: cover;
   border: 0.2rem solid #2c2c54;
 }
-.movie-row-6 ul li h6 {
+.movie-row-6 .movie-item h6 {
   font-size: 1.8rem;
+}
+.movie-row-6 .movie-item .ant-card.ant-card-bordered {
+  border-color: rgba(106, 127, 140, 0.2);
+}
+.movie-row-6 .movie-item .ant-card.ant-card-hoverable::hover {
+  box-shadow: 0 1px 2px -2px rgba(255, 255, 255, 0.1), 0 3px 6px 0 rgba(255, 255, 255, 0.3), 0 5px 12px 4px rgba(255, 255, 255, 0.5);
+}
+.movie-row-6 .movie-item .ant-card .ant-card-meta {
+  min-height: 10rem;
+}
+.movie-row-6 .movie-item .ant-card .ant-card-meta-description {
+  color: rgba(255, 255, 255, 0.4)
 }

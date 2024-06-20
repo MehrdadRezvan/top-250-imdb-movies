@@ -4,7 +4,7 @@ export const headerMenuItems = [
     link: "/"
   },
   {
-    title: "All Movies",
+    title: "Movies",
     link: "/movies"
   },
   {
@@ -18,7 +18,7 @@ export const footerMenuItems = [
     link: "/"
   },
   {
-    title: "All Movies",
+    title: "Movies",
     link: "/movies"
   },
   {

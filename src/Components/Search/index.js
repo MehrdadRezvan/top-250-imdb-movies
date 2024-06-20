@@ -1,16 +1,29 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
-import axios from "axios"
+import API from '../../helpers/api'
 import './style.css'
 
 export default function Search() {
-  const [searchData,setSearchData] = useState([])
+  const [searchData,setSearchData] = useState({
+    'data' : [],
+    'metadata' : {}
+  })
   const navigate = useNavigate()
+  const searchinput = document.getElementById("search-input")
+  window.addEventListener('click', function(e){   
+    if (document.getElementById("search-box") !== null) {
+      if (e.target == searchinput){
+        document.getElementById("search-box").classList.remove('invisible')
+      } else{
+        document.getElementById("search-box").classList.add('invisible')
+      }
+    } else {return}
+  });
   function searchFn(e) {
     if (e.target.value.length > 2) {
-      axios.get(`https://moviesapi.codingfront.dev/api/v1/movies?q=${e.target.value}`)
+      API.get(`/movies?q=${e.target.value}`)
       .then(function(res) {
-        setSearchData(res.data.data)
+        setSearchData(res.data)
       })
       .catch(function(err){
         console.log(err)
@@ -21,7 +34,7 @@ export default function Search() {
   }
   function searchItems() {
     return(
-        searchData.map(function({id,title}){
+        searchData.data.map(function({id,title}){
           return(
             <li key={id}>
               <Link to={`/m/${id}`}>
@@ -33,9 +46,9 @@ export default function Search() {
     )
   }
   function renderSearchResults() {
-    if (searchData.length > 0) {
+    if (searchData.data.length > 0) {
       return(
-        <ul className="absolute">{searchItems()}</ul>
+        <ul id="search-box" className="absolute">{searchItems()}</ul>
       )} else {return}
   }
   function goToSearch(e) {
@@ -45,8 +58,10 @@ export default function Search() {
   }
   return(
     <div className="search row align-center relative">
-      <img className="mr-2" src="/assets/images/search.svg" alt="" />
-      <input placeholder="Type-in to search ..." onChange={searchFn} onKeyDown={goToSearch}></input>
+      <Link to={'/search'}>
+        <img className="mr-2" src="/assets/images/search.svg" alt="" />
+      </Link>
+      <input id="search-input" placeholder="Type-in to search ..." onChange={searchFn} onKeyDown={goToSearch}></input>
       {renderSearchResults()}
     </div>
   )

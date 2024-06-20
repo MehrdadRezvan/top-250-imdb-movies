@@ -1,8 +1,9 @@
 import { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import API from '../../helpers/api'
 import PrimaryLayout from "../../Components/Layouts/PrimaryLayout";
 import setTitle from './../../helpers/setTitle'
+import ScrollToTop from './../../Components/ScrollToTop'
 import './style.css'
 
 export default function SingleMovie() {
@@ -14,7 +15,7 @@ export default function SingleMovie() {
     setTitle("Loading ...")
   },[])
   useEffect(function(){
-    axios.get(`https://moviesapi.codingfront.dev/api/v1/movies/${id}`)
+    API.get(`/movies/${id}`)
     .then(function(response) {
       setMovieData(response.data)
       setTitle(`${response.data.title} (${response.data.year})`)
@@ -69,6 +70,7 @@ export default function SingleMovie() {
             </Fragment>
         )}
       </div>
+      <ScrollToTop />
     </PrimaryLayout>
   )
 }
